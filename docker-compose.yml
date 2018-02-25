@@ -20,9 +20,11 @@ services:
     image: marcelocg/phoenix
     restart: always
     working_dir: /phoenix
-    command: mix ecto.create
+    command: mix phx.server
     volumes:
       - "./:/phoenix"
+    ports:
+      - 8000:4000
 
 volumes:
   dbdata:
